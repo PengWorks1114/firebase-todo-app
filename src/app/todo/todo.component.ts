@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-todo',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './todo.html',
-  styleUrls: ['./todo.css'],
+  templateUrl: './todo.component.html',
+  styleUrls: ['./todo.component.css'],
 })
 export class Todo implements OnInit {
   newTask = '';
