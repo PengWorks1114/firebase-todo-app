@@ -1,8 +1,15 @@
 <h2>我的待辦清單</h2>
 
+<!-- [(ngModel)]：雙向資料繫結，輸入框與 newTask 資料互相同步。
+(click)：點擊新增按鈕後執行 addTask() 方法。 -->
 <input [(ngModel)]="newTask" placeholder="輸入新的待辦項目" />
 <button (click)="addTask()">新增</button>
 
+<!-- *ngFor：遍歷 tasks 陣列，每一筆任務顯示為一列。
+[(ngModel)]="task.completed"：checkbox 勾選與完成狀態綁定。
+[ngClass]：當 task.completed 為 true 時，套用 .done 樣式。
+{{ task.name }}：插值表達式，顯示任務內容。
+(click)="deleteTask(i)"：點擊刪除按鈕，根據索引刪除該筆資料。 -->
 <ul>
   <li *ngFor="let task of tasks; let i = index">
     <input type="checkbox" [(ngModel)]="task.completed" />
