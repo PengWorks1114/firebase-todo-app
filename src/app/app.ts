@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Todo } from './todo/todo';
-// @filename: todo.ts
+import { Todo } from './todo/todo.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
